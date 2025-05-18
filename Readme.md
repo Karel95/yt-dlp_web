@@ -1,22 +1,22 @@
 # 📥 yt-dlp_web
 
-Una interfaz web ligera para descargar videos de YouTube usando `yt-dlp`, empaquetada completamente con Docker y Docker Compose.
+A lightweight web interface to download YouTube videos using yt-dlp, fully packaged with Docker and Docker Compose.
 
 ---
 
-## 🧩 Características
+## 🧩 Features
 
-- ✅ Pega una URL de YouTube desde la web y descárgala en segundos.
-- 🌐 UI limpia y moderna usando HTML + CSS.
-- 🐳 Completamente containerizado con Docker Compose.
-- 🗂️ Todos los videos descargados se almacenan en el directorio `/downloads`.
-- 🔗 Descargas disponibles como enlaces clicables desde la misma interfaz.
+-✅ Paste a YouTube URL from the web and download it in seconds.
+-🌐 Clean, modern UI using HTML + CSS.
+-🐳 Fully containerized with Docker Compose.
+-🗂️ All downloaded videos are saved in the /downloads directory.
+-🔗 Downloads available as clickable links from the same interface.
 
 ---
 
-## 🚀 Cómo usar
+## 🚀 How to Use
 
-### 1. Clona el repositorio
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Karel95/yt-dlp_web.git
@@ -24,14 +24,14 @@ git clone https://github.com/Karel95/yt-dlp_web.git
 cd yt-dlp_web
 ```
 
-### 2. Ejecuta el contenedor con Docker Compose
+### 2. Run the container with Docker Compose
 
 ```bash
 docker-compose up --build
 ```
 
-### 3. Accede a la interfaz web
+### 3. Access the Web Interface
 
-Abre tu navegador en:
+Open your browser at:
 <http://localhost:5000>
-Pega un link de YouTube, dale a “Descargar” y el video se guardará en la carpeta downloads/. Luego aparecerá un enlace para bajarlo.
+Paste a YouTube link, click “Download,” and the video will be saved to the downloads/ folder. A link will appear to download it.

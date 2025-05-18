@@ -40,17 +40,24 @@
 <body>
   <h1>YouTube Video Downloader</h1>
   <form method="post">
-    <input type="text" name="url" placeholder="Pega una URL de YouTube aquí" required>
-    <button type="submit">Descargar</button>
+    <input type="text" name="url" placeholder="Paste a YouTube URL here" required>
+    <button type="submit">Download</button>
   </form>
 
   {% if files %}
-    <h2>Videos descargados:</h2>
+    <h2>Downloaded Videos:</h2>
     <ul>
       {% for file in files %}
         <li><a href="{{ url_for('download_file', filename=file) }}">{{ file }}</a></li>
       {% endfor %}
     </ul>
   {% endif %}
+
+  <!-- Github section -->
+  <div class="github-section">
+    <a href="https://github.com/Karel95/yt-dlp_web" target="_blank" class="github-link">
+      <img src="https://img.shields.io/badge/Github-000000?style=for-the-badge&logo=github&logoColor=white" alt="Github">
+    </a>
+  </div>
 </body>
 </html>
