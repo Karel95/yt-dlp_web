@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Downloader</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background: #f7f7f7;
+      color: #333;
+    }
+    h1 {
+      color: #c4302b;
+    }
+    form {
+      margin-bottom: 2rem;
+    }
+    input[type="text"] {
+      width: 60%;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      margin-left: 0.5rem;
+      background-color: #c4302b;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    a {
+      color: #0645ad;
+    }
+  </style>
+</head>
+<body>
+  <h1>YouTube Video Downloader</h1>
+  <form method="post">
+    <input type="text" name="url" placeholder="Pega una URL de YouTube aquí" required>
+    <button type="submit">Descargar</button>
+  </form>
+
+  {% if files %}
+    <h2>Videos descargados:</h2>
+    <ul>
+      {% for file in files %}
+        <li><a href="{{ url_for('download_file', filename=file) }}">{{ file }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</body>
+</html>
